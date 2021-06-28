@@ -1,0 +1,133 @@
+    1  exit
+    2  sudo yum -y groupinstall "development tools"
+    3  sudo yum -y install epel-release wget
+    4  sudo wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+    5  sudo rpm -Uvh remi-release-7.rpm
+    6  sudo yum -y install --enablerepo=remi-php72 php php-pdo php-mysqlnd php-mbstring php-xml php-fpm php-common php-devel php-mysql unzip
+    7  php -v
+    8  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    9  php composer-setup.php
+   10  php -r "unlink('composer-setup.php');"
+   11  sudo mv composer.phar /usr/local/bin/composer
+   12  composer -v
+   13  exit
+   14  ls /
+   15  ls /usr
+   16  pwd
+   17  cd /vagrant
+   18  pwd
+   19  cd /home/vagrant
+   20  pwd
+   21  cd /vagrant
+   22  cd /home
+   23  cd /vagrant
+   24  pwd
+   25  cd
+   26  cd /vagrant
+   27  exit
+   28  sudo yum -y update kernel
+   29  exit
+   30  ls /
+   31  cd /vagrant
+   32  pwd
+   33  cd
+   34  cd /vagrant
+   35  mkdir server_lesson && cd server_lesson
+   36  git init
+   37  touch first.txt
+   38  cd /vagrant
+   39  mkdir -p server_lesson/linux_practice/public
+   40  ls server_lesson server_lesson/linux_practice
+   41  cd /vagrant
+   42  touch server_lesson/linux_practice/public/index.php
+   43  ls server_lesson/linux_practice/public
+   44  cd /vagrant/server_lesson && ls
+   45  cd /vagrant/server_lesson/linux_practice/public
+   46  cp index.php index_bk.php
+   47  ls
+   48  cd /vagrant/server_lesson/linux_practice
+   49  cp -r public tmp
+   50  ls ./ public tmp
+   51  cd /vagrant
+   52  mv server_lesson/linux_practice server_lesson/linux_practice1
+   53  mkdir linux_practice2 linux_practice3
+   54  mv ./linux_practice2 ./server_lesson
+   55  cd /vagrant/server_lesson/linux_practice1/tmp/
+   56  rm *_bk.php
+   57  ls
+   58  cd /vagrant
+   59  rm server_lesson/first.txt
+   60  rm -r linux_practice3
+   61  ls server_lesson
+   62  cd /vagrant/server_lesson
+   63  echo '# サーバレッスン' > README.md
+   64  echo 'Linuxプラクティス' >> README.md
+   65  echo '-----------------' >> README.md
+   66  cat README.md
+   67  cd /vagrant/server_lesson
+   68  vi README.md
+   69  git status
+   70  git add .
+   71  git status
+   72  git commit -m 'first commit'
+   73  git status
+   74  vi README.md
+   75  git status
+   76  git add .
+   77  git status
+   78  git commit -m 'Readme.mdの記述を順序なしリストを用いた記述に変更'
+   79  git status
+   80  git remote add origin https://github.com/miyoshiayato/server_lesson.git
+   81  git remote -v
+   82  git push origin master
+   83  ls
+   84  cd linux_practice2
+   85  mkdir documents
+   86  cd documents
+   87  touch {gizumo01.md,gizumo02.md,gizumo03.md,gizumo04.md,gizumo05.md,gizumo06.md,gizumo07.md,gizumo08.md,gizumo09.md,gizumo10.md,gizumo11.md,gizumo12.md,gizumo13.md,gizumo14.md,gizumo15.md,gizumo16.md,gizumo17.md,gizumo18.md,gizumo19.md,gizumo20.md,gizumo21.md,gizumo22.md,gizumo23.md,gizumo24.md,gizumo25.md,gizumo26.md,gizumo27.md,gizumo28.md,gizumo29.md,gizumo30.md,gizumo31.md,gizumo32.md,gizumo33.md,gizumo34.md,gizumo35.md,gizumo36.md,gizumo37.md,gizumo38.md,gizumo39.md,gizumo40.md,gizumo41.md,gizumo42.md,gizumo43.md,gizumo44.md,gizumo45.md,gizumo46.md,gizumo47.md,gizumo48.md,gizumo49.md,gizumo50.md}
+   88  cd linux_practice2
+   89  cd
+   90  cd linux_practice2
+   91  ls
+   92  pwd
+   93  cd /vagrant
+   94  ls
+   95  cd sere
+   96  cd server_lesson
+   97  ls
+   98  cd linux_practice2
+   99  mkdir trash
+  100  cd trash
+  101  cd linux_practice2
+  102  pwd
+  103  cd
+  104  cd /vagrant/server_lesson/linux_practice2
+  105  mv gizumo20.md gizumo21.md gizumo22.md gizumo23.md gizumo24.md gizumo25.md gizumo26.md gizumo27.md gizumo28.md gizumo29.md gizumo30.md gizumo31.md gizumo32.md gizumo33.md gizumo34.md gizumo35.md gizumo36.md gizumo37.md gizumo38.md gizumo39.md gizumo40.md trash/.
+  106  ls
+  107  mv gizumo20.md gizumo21.md gizumo22.md gizumo23.md gizumo24.md gizumo25.md gizumo26.md gizumo27.md gizumo28.md gizumo29.md gizumo30.md gizumo31.md gizumo32.md gizumo33.md gizumo34.md gizumo35.md gizumo36.md gizumo37.md gizumo38.md gizumo39.md gizumo40.md /trash/.
+  108  mv gizumo20.md gizumo21.md gizumo22.md gizumo23.md gizumo24.md gizumo25.md gizumo26.md gizumo27.md gizumo28.md gizumo29.md gizumo30.md gizumo31.md gizumo32.md gizumo33.md gizumo34.md gizumo35.md gizumo36.md gizumo37.md gizumo38.md gizumo39.md gizumo40.md trash/.
+  109  cd documents
+  110  mv gizumo20.md gizumo21.md gizumo22.md gizumo23.md gizumo24.md gizumo25.md gizumo26.md gizumo27.md gizumo28.md gizumo29.md gizumo30.md gizumo31.md gizumo32.md gizumo33.md gizumo34.md gizumo35.md gizumo36.md gizumo37.md gizumo38.md gizumo39.md gizumo40.md trash/.
+  111  ls
+  112  pwd
+  113  mv gizumo20.md gizumo21.md gizumo22.md gizumo23.md gizumo24.md gizumo25.md gizumo26.md gizumo27.md gizumo28.md gizumo29.md gizumo30.md gizumo31.md gizumo32.md gizumo33.md gizumo34.md gizumo35.md gizumo36.md gizumo37.md gizumo38.md gizumo39.md gizumo40.md /vagrant/server_lesson/linux_practice2/trash/.
+  114  cd /vagrant/server_lesson/linux_practice2
+  115  cd trash
+  116  ls
+  117  cd /vagrant/server_lesson/linux_practice2
+  118  touch .gitignore
+  119  ls
+  120  cd .gitignore
+  121  touch .gitignore
+  122  ls
+  123  vi .gitignore
+  124  pwd
+  125  cd /vagrant/server_lesson
+  126  git status
+  127  git add .
+  128  git commit -m 'gizumo20.md ~ gizumo29.md までのファイルはgit管理対象に置かないことを設定する記述を追加'
+  129  git status
+  130  pwd
+  131  ls
+  132  cd linux_practice2
+  133  history 300 > exec_command.log
